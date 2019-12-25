@@ -44,7 +44,7 @@ console.log(process.env.npm_package_config_arg)
 
 
 ```javascript
-\* node 环境*\
+\* Node环境 *\
 
 a = 1 \\ 执行LHS查询，无法找到目标变量 a，所以在 global 上创建了 a
 
@@ -73,21 +73,6 @@ function c() {}
 console.log(window.a)  // 1
 console.log(window.b)  // 2
 console.log(window.c)  // function c() {}
-
-```
-
-
-```javascript
-\* Node环境 *\
-a = 1
-
-var b = 2
-
-function c() {}
-
-console.log(global.a)  // 1
-console.log(global.b)  // undefined
-console.log(global.c)  // undefined
 
 ```
 
