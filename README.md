@@ -146,7 +146,7 @@ arguments | r一个用来被constructor 调用的参数列表。
 - 由构造函数返回的对象就是 new 表达式的结果。如果构造函数没有显式返回一个对象，则使用步骤1创建的对象。（一般情况下，构造函数不返回值，但是用户可以选择主动返回对象，来覆盖正常的对象创建步骤）
 
 
-```
+```javascript
 function newObj (Constructor) {
   var args = []
 
@@ -185,7 +185,7 @@ console.log(car instanceof Car)
 
 一种防御式编程
 
-```
+```javascript
 function Car (name) {
   if (!this instanceof Car) {
     throw new Error('should be called with the new !')
@@ -195,4 +195,10 @@ function Car (name) {
   }
   this.name = name
 }
+```
+
+## git
+### VS CODE 提交密码
+```
+git config --global credential.helper store
 ```
